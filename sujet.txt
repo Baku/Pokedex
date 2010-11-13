@@ -1,0 +1,185 @@
+      /"*-.                                                         
+     /     `-.                                                      
+    /         `-.                                                   
+   /             `-.                                                
+   `"*-._           `-.                                             
+         "*-.      .-'                                              
+           .-'  .-'                                                 
+         <'   <'                                                    
+          `-.  `-.           .                                      
+            .'  .-'          $                                      
+     _    .' .-'            :$;                                     
+     T$bp.L.-*""*-._        d$b                                     
+      `TP `-.       `-.    : T$                                     
+     .' `.   `.        `.  ;  ;                                     
+    /     `.   \ _.      \:  :                                      
+   /        `..-"         ;  |                                      
+  :          /               ;                                      
+  ;  \      / _             :  
+ /`--'\   .' $o$            |   Rush POKEMON
+/  /   `./-, `"'      _     :  
+'-'     :  ;  _ '    $o$    ;  
+        ;Y"   |"-.   `"'   /                                        
+        | `.  L.'    .-.  /`*.   
+        :   `-.     ;   :'    \                                     
+         ;    :`*-._L.-'`-.    :                                    
+         :    ;            `-.*                                     
+          \  /                                                      
+           ""                                                  
+
+Fichiers joints: Mdata.xml, pokedata.xml
+
+Etape 1) 
+
+Ecrivez un Pokedex. C'est a dire une encyclopedie des Pokemons. Vous
+DEVEZ afficher toutes les informations possible (attaques, evolutions...).
+On DOIT pouvoir voir quelles sont les evolutions d'un Pokemon.
+On DOIT pouvoir afficher a quel niveau on obtient une attaque ou les 
+evolutions possibles d'un Pokemon par exemple.
+Votre Pokedex DOIT comporter une interface graphique Qt (coloree de preference).
+Un affichage par terminal ne sera pas accepte en soutenance.
+
+Reflechissez bien a la maniere dont vous aller representer un Pokemon
+ainsi qu'a la maniere de les afficher. La realisation d'un diagramme de 
+sequence tel que vu en cours d'UML peut s'averer precieux.
+
+Etape 2)
+
+On DOIT pouvoir gerer une equipe de pokemons c'est a dire creer des
+pokemons en les selectionnants a partir d'un Pokedex et les regrouper dans
+un structure logique appellee "equipe".
+On DOIT pouvoir sauvegarder l'equipe et la recharger.
+Une sauvegarde d'equipe DOIT survivre a la fermeture de votre programme.
+Un Pokemon commence bien sur avec 0 points d'experience.
+Vous POUVEZ limiter le nombre de Pokemons presents dans une equipe selon le critere de votre choix.
+
+Une equipe DOIT avoir un proprietaire qui DOIT etre definit au minimum par son nom et son 
+avatar.
+Vous POUVEZ ajouter des caracteristiques au proprietaire si vous en avez besoin/envie.
+Un proprietaire PEUT posseder plusieurs equipes.
+Une equipe DOIT avoir obligatoirement un et un seul proprietaire.
+
+On DOIT pouvoir creer des proprietaires grace a une interface graphique.
+On DOIT pouvoir creer des equipes grace a une interface graphique.
+
+Tip : Comment representer une classe d'association en UML ?
+
+Etape 3)
+
+On DOIT pouvoir organiser des combats entre deux equipes de Pokemons.
+Ces combat DOIVENT avoir lieu dans une arene a Pokemons
+En fonction de leur niveau chaque pokemon DOIT proposer toute les attaques
+auquel il a le droit. 
+
+On DOIT pouvoir selectionner le Pokemon de chaque equipe qui commence le combat.
+Lorsqu'un Pokemon est battu, il ne DEVRAIT plus pouvoir participer au combat et
+un autre Pokemon DOIT pouvoir etre choisi pour continuer le combat.
+
+Le combat DOIT s'achever lorsque l'une des deux equipes n'a plus de Pokemons en 
+etat de combattre.
+Les 2 Pokemons d'affontant DOIVENT attaquer chacun leur tour en fonction de leur
+vitesse (SPD la plus elevee attaque en premier). Il ne DEVRAIT pas etre possible
+d'utiliser une attaque plus de PP fois pendant un combat.
+
+Pour calculer les degats d'une attaque, vous DEVEZ utiliser cette formule:
+DEGAT de la cible = DEF de la cible - (ATK de l'attaquant * POWER de
+l'attaque)
+
+Pour savoir si on touche vous DEVEZ utiliser cette formule:
+IF RANDOM(0,100) <  ACCURACY de l'attaque
+THEN 
+     TOUCHE
+ELSE
+     LOUPE
+END
+
+Lorsqu'un Pokemon est reduit a 0 points de vie, il DOIT etre mis hors de combat.
+Un pokemon qui en met en autre hors de combat DOIT gagner de l'experience.
+La valeur de ce gain est laissee a votre discretion.
+Une equipe qui en bat une autre DOIT gagner de l'experience pour chacun 
+de ses pokemons. La valeur de ce gain est egalement laissee a votre discretion.
+Lorsqu'un Pokemon gagne un niveau, ses stats DOIVENT evoluer.
+Lorsque qu'un Pokemon atteint un niveau lui pemettant d'evoluer, le Pokemon
+DOIT evoluer et le nouveau Pokemon DOIT remplacer l'ancien dans l'equipe.
+Le niveau maximum d'un Pokemon DOIT etre 100. 
+
+
+Consignes :
+
+- Vous DEVEZ rendre un diagramme de classes pour votre projet.
+  Il est acceptable que ce diagramme soit repartit en plusieurs
+  diagrammes decoupe en fonction des differentes etapes du projet.
+
+- Vous DEVEZ respecter le langage UML pour realiser votre diagramme de classes
+
+- Vous DEVEZ faire apparaitre la cardinalite entre vos classes sur votre diagramme de classes
+
+- La base de donnees des pokemons vous est fournis au format XML, vous
+  DEVEZ utiliser Qt XML pour lire les fichiers au format XML.
+
+- Le fichier pokedata.xml contient la liste des pokemons. Le fichier
+  Mdata.xml contient la liste des techniques. Ces fichier ne DOIVENT PAS
+  etre modifies.
+
+- Vos/votre interface(s) graphique(s) DOIVENT/DOIVENT etre belle(s)
+
+- Votre code DOIT etre portable Windows/UNIX
+
+- Votre code DOIT etre du C++ elegant (references, const, ...)
+
+- Vos classes DOIVENT etre canoniques
+
+- Vous DEVEZ utiliser un SCM pour ce projet, sinon vous aurez 0.
+  Nous verifierons vos logs pour nous assurer que vous n'avez pas detourne cette consigne.
+  Nous n'accordons pas d'importance au SCM que vous voulez utiliser pour ce projet.
+  Voici quelques exemples de SCMs courants :
+    * Subversion (http://subversion.tigris.org/)
+    * Git (http://git-scm.com/)
+    * Mercurial (http://www.selenic.com/mercurial/)
+
+- Vous DEVEZ installer votre PROPRE serveur de SCM pour ce projet, le Koalab ne vous en fournira pas.
+
+- Le rush commence le vendredi a 18h et se termine le dimanche a 10h. Vous serez evalue sur la revision
+  de votre SCM qui s'approchera le plus de 10h le dimanche sans depasser cette limite.
+
+- Les soutenances auront lieu a partir de 10h le dimanche matin a Paris. Pour les etudiants de provinces,
+  referez vous a votre DPR pour connaitre vos dates de soutenance. Toutefois, votre rush se termine QUAND MEME
+  le dimanche matin a 10h afin de garder Paris et les villes de province sur un pied d'egalite.
+
+- Certains points de ce projet sont peut etre vagues, non precis ou contradictoires.
+  Ceci est typique d'un cahier des charges dans des conditions reelles.
+  Vous DEVEZ leur trouver une solution pertinentes que VOUS DEVEZ justifier.
+  Les demandes de precisions par mail ne seront pas repondues.
+  Vous DEVEZ reflechir et vous DEVEZ agir intelligemment par VOUS MEME.
+  Il n'y a pas de reponse universelle.
+  Cet aspect du projet fait partis de l'evaluation et sera present dans le bareme de soutenance.
+
+- Les groupes sont libres pour ce projet.
+
+
+Interdictions :
+
+- Toute lib externe autre que Qt est INTERDITE, SAUF si vous voulez rendre
+  votre projet compatible avec d'autres librairies graphiques.
+  Tout detournement de cette exception sera severement sanctionne
+  a la soutenance.
+
+
+Bonus :
+
+- Diagramme de sequence en plus du diagramme de classe (GROS bonus)
+- Votre projet supporte differentes interfaces graphiques (par exemple, MFC et Qt sous Windows et GTK+ et Qt sous UNIX)
+- Votre projet affiche l'image de chaque pokemon. Le numero de chaque Pokemon et l'adresse http://lmgtfy.com/?q=liste+pokemons peuvent vous aider
+- On peut se connecter en reseau a une arene pour faire combattre son equipe. Utilisez Qt Network pour cela
+- Les combats sont animes
+- ...
+
+
+Malus :
+
+- Votre diagramme de classes UML ne DOIT PAS etre bacle et/ou imprecis
+- Votre diagramme de classes UML ne DOIT PAS etre genere a partir de votre code
+- Votre interface graphique DOIT etre reliee a votre back end
+- Chaque etape DOIT etre entierement terminee avant de passer a la suivante
+- Votre code ne DOIT PAS etre du C et/ou du C+
+- ...

@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<list>
+  <TM id='01'>
+    <name>Focus Punch</name>
+    <kind>Physical</kind>
+    <type>Fighting</type>
+    <PP>20</PP>
+    <power>150</power>
+    <accuracy>100</accuracy>
+    <information>Attacks after turn is over. Flinches if hit.</information>
+    <location>Kurogane gate</location>
+    <suggestion>Use this in combination with Substitute.</suggestion>
+  </TM>
+  <TM id='02'>
+    <name>Dragon Claw</name>
+    <kind>Physical</kind>
+    <type>Dragon</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Nothing special as far as added effects go.</information>
+    <location>Tengan Mountain</location>
+    <suggestion>Good against dragon Pokemon.</suggestion>
+  </TM>
+  <TM id='03'>
+    <name>Water Pulse</name>
+    <kind>Special</kind>
+    <type>Water</type>
+    <PP>20</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>10% chance of confusion.</information>
+    <location>Deserted Escape Path</location>
+    <suggestion>Good if you like confusing the foe.</suggestion>
+  </TM>
+  <TM id='04'>
+    <name>Calm Mind</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>20</PP>
+    <information>This raises special attack and special defense.</information>
+    <location>Exchange at Fight Area with 48 (Battle Points)</location>
+    <suggestion>If you can manage to do six of these, you will become nearly invincible. Even one, though, can help.</suggestion>
+  </TM>
+  <TM id='05'>
+    <name>Roar</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>Forces trainer to switch Pokemon. Also can be used to flee from wild Pokemon.</information>
+    <location>Route 213</location>
+    <suggestion>A good counter for stat-increasing moves used on the foe.</suggestion>
+  </TM>
+  <TM id='06'>
+    <name>Toxic</name>
+    <kind>Other</kind>
+    <type>Poison</type>
+    <PP>10</PP>
+    <accuracy>85</accuracy>
+    <information>Poisons the foe. Poison gets stronger as turns progress.</information>
+    <location>Exchange at Fight Area with 32 (Battle Points)</location>
+    <suggestion>Great if you can land it on all the opponent's Pokemon.</suggestion>
+  </TM>
+  <TM id='07'>
+    <name>Hail</name>
+    <kind>Other</kind>
+    <type>Ice</type>
+    <PP>10</PP>
+    <information>Hail starts. Hurts all Pokemon except ice Pokemon.</information>
+    <location>Route 217</location>
+    <suggestion>Use with caution. It can backfire.</suggestion>
+  </TM>
+  <TM id='08'>
+    <name>Bulk Up</name>
+    <kind>Other</kind>
+    <type>Fighting</type>
+    <PP>20</PP>
+    <information>Boosts both attack and defense.</information>
+    <location>Exchange at Fight Area with 48 (Battle Points)</location>
+    <suggestion>Good for combo moves.</suggestion>
+  </TM>
+  <TM id='09'>
+    <name>Bullet Seed</name>
+    <kind>Physical</kind>
+    <type>Grass</type>
+    <PP>30</PP>
+    <power>10</power>
+    <accuracy>100</accuracy>
+    <information>This attacks 2-5 times per turn.</information>
+    <location>Route 204</location>
+    <suggestion>Good to start with, but you should not use it in competitive battles.</suggestion>
+  </TM>
+  <TM id='10'>
+    <name>Hidden Power</name>
+    <kind>Special</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <accuracy>100</accuracy>
+    <information>Type and power depends on the Pokemon.Location: Kotobuki City2nd </information>
+    <location>Kotobuki City</location>
+    <suggestion>This can be good or bad depending on the opponent's Pokemon.</suggestion>
+  </TM>
+  <TM id='11'>
+    <name>Sunny Day</name>
+    <kind>Other</kind>
+    <type>Fire</type>
+    <PP>5</PP>
+    <information>This boosts fire-type moves for 5 turns. Only 1 turn required for solarbeam.</information>
+    <location>Route 212</location>
+    <suggestion>Use with caution. It can backfire (but not too much).</suggestion>
+  </TM>
+  <TM id='12'>
+    <name>Taunt</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>Taunts foe into using only attack-based moves.</information>
+    <location>Route 211</location>
+    <suggestion>Good way to prevent stat-increasing moves.</suggestion>
+  </TM>
+  <TM id='13'>
+    <name>Ice Beam</name>
+    <kind>Special</kind>
+    <type>Ice</type>
+    <PP>10</PP>
+    <power>95</power>
+    <accuracy>100</accuracy>
+    <information>10% chance of becoming frozen.Location: Route 2162nd </information>
+    <location>Route 216</location>
+    <suggestion>Awesome. This should be your ice move of choice.</suggestion>
+  </TM>
+  <TM id='14'>
+    <name>Blizzard</name>
+    <kind>Special</kind>
+    <type>Ice</type>
+    <PP>5</PP>
+    <power>120</power>
+    <accuracy>85</accuracy>
+    <information>10% chance of becoming frozen.</information>
+    <location>Buy at Tobari Department Store with 5500 (Money)</location>
+    <suggestion>Great if you can land it.</suggestion>
+  </TM>
+  <TM id='15'>
+    <name>Hyper Beam</name>
+    <kind>Special</kind>
+    <type>Normal</type>
+    <PP>5</PP>
+    <power>150</power>
+    <accuracy>90</accuracy>
+    <information>Attacks for massive damage. Cannot attack second turn.</information>
+    <location>Buy at Tobari Department Store with 7500 (Money)</location>
+    <suggestion>Should be used as a finishing move.</suggestion>
+  </TM>
+  <TM id='16'>
+    <name>Light Screen</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>30</PP>
+    <information>This lowers special attack damage.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>Great if you have a Blissey and all your opponent's Pokemon use special attacks.</suggestion>
+  </TM>
+  <TM id='17'>
+    <name>Protect</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Prevents being attacked for that turn. It may fail if used continuously.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>A good stalling move.</suggestion>
+  </TM>
+  <TM id='18'>
+    <name>Rain Dance</name>
+    <kind>Other</kind>
+    <type>Water</type>
+    <PP>5</PP>
+    <information>This boosts water-type moves for 5 turns. Thunder cannot miss.</information>
+    <location>Route 213</location>
+    <suggestion>Use with caution. It can backfire (but not too much).</suggestion>
+  </TM>
+  <TM id='19'>
+    <name>Giga Drain</name>
+    <kind>Special</kind>
+    <type>Grass</type>
+    <PP>10</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>Half of the inflicted damaged is restored to user's HP.</information>
+    <location>Route 209</location>
+    <suggestion>Decent attack.</suggestion>
+  </TM>
+  <TM id='20'>
+    <name>Safeguard</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>25</PP>
+    <information>Prevents all status problems for the entire party.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>Good move.</suggestion>
+  </TM>
+  <TM id='21'>
+    <name>Frustration</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>The power is stronger the more the Pokemon hates you.</information>
+    <location>Team Galaxy Warehouse</location>
+    <suggestion>Use if your Pokemon hate you a bunch.</suggestion>
+  </TM>
+  <TM id='22'>
+    <name>Solarbeam</name>
+    <kind>Special</kind>
+    <type>Grass</type>
+    <PP>10</PP>
+    <power>120</power>
+    <accuracy>100</accuracy>
+    <information>Charges up the first turn and strikes the second.</information>
+    <location>Buy at Tobari Department Store with 3000 (Money)</location>
+    <suggestion>Good for grass-type Pokemon. Awesome when used with Sunny Day.</suggestion>
+  </TM>
+  <TM id='23'>
+    <name>Iron Tail</name>
+    <kind>Physical</kind>
+    <type>Steel</type>
+    <PP>15</PP>
+    <power>100</power>
+    <accuracy>75</accuracy>
+    <information>This may lower the foe's defense (10% chance).</information>
+    <location>Iron Island</location>
+    <suggestion>Powerful, but not accurate enough.</suggestion>
+  </TM>
+  <TM id='24'>
+    <name>Thunderbolt</name>
+    <kind>Special</kind>
+    <type>Electric</type>
+    <PP>15</PP>
+    <power>95</power>
+    <accuracy>100</accuracy>
+    <information>10% chance of becoming paralyzed.Location: Above the Power Plant (use surf to get it).2nd </information>
+    <location>Above the Power Plant (use surf to get it).</location>
+    <suggestion>Awesome. This should be your electric move of choice.</suggestion>
+  </TM>
+  <TM id='25'>
+    <name>Thunder</name>
+    <kind>Special</kind>
+    <type>Electric</type>
+    <PP>10</PP>
+    <power>120</power>
+    <accuracy>70</accuracy>
+    <information>10% chance of becoming paralyzed.</information>
+    <location>Buy at Tobari Department Store with 5500 (Money)</location>
+    <suggestion>Great if you can land it. Awesome when used with Rain dance.</suggestion>
+  </TM>
+  <TM id='26'>
+    <name>Earthquake</name>
+    <kind>Physical</kind>
+    <type>Ground</type>
+    <PP>10</PP>
+    <power>100</power>
+    <accuracy>100</accuracy>
+    <information>If foe is using dig, damage is doubled.Location: Cave of Doubt (Secret Entrance)2nd </information>
+    <location>Cave of Doubt (Secret Entrance)</location>
+    <suggestion>Simply put, this move is quite incredible.</suggestion>
+  </TM>
+  <TM id='27'>
+    <name>Return</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>The power is stronger the more the Pokemon likes you.Location: Lost Tower2nd </information>
+    <location>Lost Tower</location>
+    <suggestion>Use if your Pokemon like you a bunch.</suggestion>
+  </TM>
+  <TM id='28'>
+    <name>Dig</name>
+    <kind>Physical</kind>
+    <type>Ground</type>
+    <PP>10</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Digs underground the first turn and attacks the second turn.</information>
+    <location>Route 214</location>
+    <suggestion>Good move to use if you want an earthquake alternative.</suggestion>
+  </TM>
+  <TM id='29'>
+    <name>Psychic</name>
+    <kind>Special</kind>
+    <type>Psychic</type>
+    <PP>10</PP>
+    <power>90</power>
+    <accuracy>100</accuracy>
+    <information>This may lower the foe's defense (10% chance).</information>
+    <location>Exchange at Game Arcade with 10000 (Tokens)</location>
+    <suggestion>Awesome. This should be your psychic move of choice.</suggestion>
+  </TM>
+  <TM id='30'>
+    <name>Shadow Ball</name>
+    <kind>Special</kind>
+    <type>Ghost</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>This may lower the foe's defense (20% chance).Location: Route 2102nd </information>
+    <location>Route 210</location>
+    <suggestion>Awesome. This should be your ghost move of choice.</suggestion>
+  </TM>
+  <TM id='31'>
+    <name>Brick Break</name>
+    <kind>Physical</kind>
+    <type>Fighting</type>
+    <PP>15</PP>
+    <power>75</power>
+    <accuracy>100</accuracy>
+    <information>Destroys Reflect and Light Screen</information>
+    <location>Exchange at Fight Area with 40 (Battle Points)</location>
+    <suggestion>A decent fighting attack.</suggestion>
+  </TM>
+  <TM id='32'>
+    <name>Double Team</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <information>Increases evasiveness</information>
+    <location>Exchange at Game Arcade with 4000 (Tokens)</location>
+    <suggestion>A risky move, but it could pay off.</suggestion>
+  </TM>
+  <TM id='33'>
+    <name>Reflect</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>20</PP>
+    <information>This lowers attack damage.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>Decent defender.</suggestion>
+  </TM>
+  <TM id='34'>
+    <name>Shock Wave</name>
+    <kind>Special</kind>
+    <type>Electric</type>
+    <PP>20</PP>
+    <power>60</power>
+    <information>Never misses</information>
+    <location>Route 215</location>
+    <suggestion>If you like accuracy, this is for you.</suggestion>
+  </TM>
+  <TM id='35'>
+    <name>Flamethrower</name>
+    <kind>Special</kind>
+    <type>Fire</type>
+    <PP>15</PP>
+    <power>95</power>
+    <accuracy>100</accuracy>
+    <information>10% chance of becoming burned.</information>
+    <location>Exchange at Game Arcade with 10000 (Tokens)</location>
+    <suggestion>Awesome. This should be your fire move of choice.</suggestion>
+  </TM>
+  <TM id='36'>
+    <name>Sludge Bomb</name>
+    <kind>Special</kind>
+    <type>Poison</type>
+    <PP>10</PP>
+    <power>90</power>
+    <accuracy>100</accuracy>
+    <information>30% chance of becoming poisoned.Location: Team Galaxy Warehouse2nd </information>
+    <location>Team Galaxy Warehouse</location>
+    <suggestion>Awesome. This should be your poison move of choice.</suggestion>
+  </TM>
+  <TM id='37'>
+    <name>Sandstorm</name>
+    <kind>Other</kind>
+    <type>Rock</type>
+    <PP>10</PP>
+    <information>A sandstorm starts. Hurts all Pokemon except ground, rock, and steel Pokemon.</information>
+    <location>Route 228</location>
+    <suggestion>Use with caution. It can backfire.</suggestion>
+  </TM>
+  <TM id='38'>
+    <name>Fire Blast</name>
+    <kind>Special</kind>
+    <type>Fire</type>
+    <PP>5</PP>
+    <power>120</power>
+    <accuracy>85</accuracy>
+    <information>10% chance of becoming burned.Location: Trust Lake2nd </information>
+    <location>Trust Lake</location>
+    <suggestion>Decent accuracy. Use only if you think your Pokemon is powerful enough to knock out a foe in one hit with this move.</suggestion>
+  </TM>
+  <TM id='39'>
+    <name>Rock Tomb</name>
+    <kind>Physical</kind>
+    <type>Rock</type>
+    <PP>10</PP>
+    <power>50</power>
+    <accuracy>80</accuracy>
+    <information>This will lower the foe's speed</information>
+    <location>Deserted Escape Path</location>
+    <suggestion>This can become quite annoying if you use it properly, but it can easily be countered. Try not to use this more than a couple of times unless you have to.</suggestion>
+  </TM>
+  <TM id='40'>
+    <name>Aerial Ace</name>
+    <kind>Physical</kind>
+    <type>Flying</type>
+    <PP>20</PP>
+    <power>60</power>
+    <information>Never misses.Location: Route 2132nd </information>
+    <location>Route 213</location>
+    <suggestion>If you like accuracy, this is for you.</suggestion>
+  </TM>
+  <TM id='41'>
+    <name>Torment</name>
+    <kind>Other</kind>
+    <type>Dark</type>
+    <PP>15</PP>
+    <accuracy>100</accuracy>
+    <information>Foe is unable to use the same move twice in a row.</information>
+    <location>Victory Road</location>
+    <suggestion>This can become a pain for the opponent if used correctly.</suggestion>
+  </TM>
+  <TM id='42'>
+    <name>Facade</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <power>70</power>
+    <accuracy>100</accuracy>
+    <information>Doubles attack if burned, Poison, Paralyzed.</information>
+    <location>Petalburg Gym</location>
+    <suggestion>160 Base Power Slaking + 140 attack move = ??? You do the math. :P</suggestion>
+  </TM>
+  <TM id='43'>
+    <name>Secret Power</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <power>70</power>
+    <accuracy>100</accuracy>
+    <information>The effect of this move depends on the location.</information>
+    <location>Contact Square</location>
+    <suggestion>If you know where you are, it's a good move.</suggestion>
+  </TM>
+  <TM id='44'>
+    <name>Rest</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>10</PP>
+    <information>The user becomes asleep. Lasts 2 turns.</information>
+    <location>Exchange at Game Arcade with 6000 (Tokens)</location>
+    <suggestion>Great for Pokemon with high HP.</suggestion>
+  </TM>
+  <TM id='45'>
+    <name>Attract</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <accuracy>100</accuracy>
+    <information>Makes the opposite gender less likely to attack (50%).</information>
+    <location>Exchange at Fight Area with 32 (Battle Points)</location>
+    <suggestion>Good if your opponent's Pokemon have the same gender and they are opposite from the Pokemon on your team using charm.</suggestion>
+  </TM>
+  <TM id='46'>
+    <name>Thief</name>
+    <kind>Physical</kind>
+    <type>Dark</type>
+    <PP>10</PP>
+    <power>40</power>
+    <accuracy>100</accuracy>
+    <information>Has a chance of taking the foe's held item.</information>
+    <location>Hakutai City</location>
+    <suggestion>Useful when trying to get a foe's held item.</suggestion>
+  </TM>
+  <TM id='47'>
+    <name>Steel Wing</name>
+    <kind>Physical</kind>
+    <type>Steel</type>
+    <PP>25</PP>
+    <power>70</power>
+    <accuracy>90</accuracy>
+    <information>This may increase the user's defense (10%).</information>
+    <location>Route 209</location>
+    <suggestion>Decent steel maneuver.</suggestion>
+  </TM>
+  <TM id='48'>
+    <name>Skill Swap</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>10</PP>
+    <accuracy>100</accuracy>
+    <information>Switches abilities with foe.</information>
+    <location>Mio City (from a resident in the city)</location>
+    <suggestion>Use strategically. It can backfire.</suggestion>
+  </TM>
+  <TM id='49'>
+    <name>Snatch</name>
+    <kind>Other</kind>
+    <type>Dark</type>
+    <PP>10</PP>
+    <accuracy>100</accuracy>
+    <information>This steals the effects of the foe's next move.</information>
+    <location>Team Galaxy Warehouse</location>
+    <suggestion>Good if the foe keeps using stat-increasing moves.</suggestion>
+  </TM>
+  <TM id='50'>
+    <name>Overheat</name>
+    <kind>Special</kind>
+    <type>Fire</type>
+    <PP>5</PP>
+    <power>140</power>
+    <accuracy>90</accuracy>
+    <information>This lowers the user's special attack.</information>
+    <location>Hard Mountain</location>
+    <suggestion>This can be a good alternative to Fire Blast.</suggestion>
+  </TM>
+  <TM id='51'>
+    <name>Roost</name>
+    <kind>Other</kind>
+    <type>Flying</type>
+    <PP>10</PP>
+    <information>This restores half of Max HP.</information>
+    <location>Route 210</location>
+    <suggestion>Great recover move.</suggestion>
+  </TM>
+  <TM id='52'>
+    <name>Focus Blast</name>
+    <kind>Special</kind>
+    <type>Fighting</type>
+    <PP>5</PP>
+    <power>120</power>
+    <accuracy>70</accuracy>
+    <information>This may lower the foe's speed.</information>
+    <location>Buy at Tobari Department Store with 5500 (Money)</location>
+    <suggestion>Great if you can land it.</suggestion>
+  </TM>
+  <TM id='53'>
+    <name>Energy Ball</name>
+    <kind>Special</kind>
+    <type>Grass</type>
+    <PP>10</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>This may lower the foe's speed.</information>
+    <location>Exchange at Fight Area with 64 (Battle Points)</location>
+    <suggestion>Great grass-based attack.</suggestion>
+  </TM>
+  <TM id='54'>
+    <name>False Swipe</name>
+    <kind>Physical</kind>
+    <type>Fighting</type>
+    <PP>40</PP>
+    <power>40</power>
+    <accuracy>100</accuracy>
+    <information>Always leaves the foe with at least 1 HP.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>Incredible when lowering legendary's HP for capture.</suggestion>
+  </TM>
+  <TM id='55'>
+    <name>Brine</name>
+    <kind>Special</kind>
+    <type>Water</type>
+    <PP>10</PP>
+    <power>65</power>
+    <accuracy>100</accuracy>
+    <information>Power is 130 if Pokemon's HP is less than half.</information>
+    <location>Nomose Gym</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='56'>
+    <name>Fling</name>
+    <kind>Physical</kind>
+    <type>Dark</type>
+    <PP>10</PP>
+    <accuracy>100</accuracy>
+    <information>This move hurls out the item the Pokemon is holding. The power of the move depends on the item.</information>
+    <location>Route 222</location>
+    <suggestion>Use if you have a good item.</suggestion>
+  </TM>
+  <TM id='57'>
+    <name>Charge Beam</name>
+    <kind>Special</kind>
+    <type>Electric</type>
+    <PP>10</PP>
+    <power>50</power>
+    <accuracy>90</accuracy>
+    <information>A high chance of raising the Pokemon's special attack.</information>
+    <location>Nagisa Gym</location>
+    <suggestion>A decent electric attack.</suggestion>
+  </TM>
+  <TM id='58'>
+    <name>Endure</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Always leaves the Pokemon with at least 1 HP. It may fail if used continuously.</information>
+    <location>Exchange at Game Arcade with 2000 (Tokens)</location>
+    <suggestion>A good move for stalling.</suggestion>
+  </TM>
+  <TM id='59'>
+    <name>Dragon Pulse</name>
+    <kind>Special</kind>
+    <type>Dragon</type>
+    <PP>10</PP>
+    <power>90</power>
+    <accuracy>100</accuracy>
+    <information>Nothing special as far as added effects go.Location: Victory Road2nd </information>
+    <location>Victory Road</location>
+    <suggestion>An excellent dragon attack. Good against dragon Pokemon.</suggestion>
+  </TM>
+  <TM id='60'>
+    <name>Drain Punch</name>
+    <kind>Physical</kind>
+    <type>Fight</type>
+    <PP>5</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>Half of the inflicted damaged is restored to user's HP.</information>
+    <location>Tobari Gym</location>
+    <suggestion>Decent attack.</suggestion>
+  </TM>
+  <TM id='61'>
+    <name>Will-O-Wisp</name>
+    <kind>Other</kind>
+    <type>Fire</type>
+    <PP>15</PP>
+    <accuracy>75</accuracy>
+    <information>Burns the foe.</information>
+    <location>Exchange at Fight Area with 32 (Battle Points)</location>
+    <suggestion>Great if you can land it on all the opponent's Pokemon.</suggestion>
+  </TM>
+  <TM id='62'>
+    <name>Silver Wind</name>
+    <kind>Special</kind>
+    <type>Bug</type>
+    <PP>5</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>May raise abilities.</information>
+    <location>Route 212</location>
+    <suggestion>Decent attack. Good if you can raise abilities.</suggestion>
+  </TM>
+  <TM id='63'>
+    <name>Embargo</name>
+    <kind>Other</kind>
+    <type>Dark</type>
+    <PP>15</PP>
+    <accuracy>100</accuracy>
+    <information>Prevents foe from using held items.</information>
+    <location>Tobari City</location>
+    <suggestion>Great if you want to disable leftovers or other items.</suggestion>
+  </TM>
+  <TM id='64'>
+    <name>Explosion</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>5</PP>
+    <power>250</power>
+    <accuracy>100</accuracy>
+    <information>User faints with user.</information>
+    <location>Slot Game**</location>
+    <suggestion>Use only as a last resort.</suggestion>
+  </TM>
+  <TM id='65'>
+    <name>Shadow Claw</name>
+    <kind>Physical</kind>
+    <type>Dark</type>
+    <PP>15</PP>
+    <power>70</power>
+    <accuracy>100</accuracy>
+    <information>Has a high chance of landing a critical hit.</information>
+    <location>Yosuga Gym</location>
+    <suggestion>Good if you can land critical hits.</suggestion>
+  </TM>
+  <TM id='66'>
+    <name>Payback</name>
+    <kind>Physical</kind>
+    <type>Dark</type>
+    <PP>10</PP>
+    <power>50</power>
+    <accuracy>100</accuracy>
+    <information>Power is 100 if foe attacks first.</information>
+    <location>Route 215</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='67'>
+    <name>Recycle</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Recycles a used item for one more use.</information>
+    <location>Hakutai Moutain</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='68'>
+    <name>Giga Impact</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>5</PP>
+    <power>150</power>
+    <accuracy>90</accuracy>
+    <information>Attacks for massive damage. Cannot attack second turn.</information>
+    <location>Exchange at Game Arcade with 20000 (Tokens)</location>
+    <suggestion>Should be used as a finishing move.</suggestion>
+  </TM>
+  <TM id='69'>
+    <name>Rock Polish</name>
+    <kind>Other</kind>
+    <type>Rock</type>
+    <PP>20</PP>
+    <information>Greatly raises Pokemon's speed.</information>
+    <location>Tengan Mountain</location>
+    <suggestion>Decent move.</suggestion>
+  </TM>
+  <TM id='70'>
+    <name>Flash</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>Lowers the foe's accuracy.</information>
+    <location>Buy at Tobari Department Store with 1000 (Money)</location>
+    <suggestion>Decent Move.</suggestion>
+  </TM>
+  <TM id='71'>
+    <name>Stone Edge</name>
+    <kind>Physical</kind>
+    <type>Rock</type>
+    <PP>5</PP>
+    <power>100</power>
+    <accuracy>80</accuracy>
+    <information>Has a high chance of landing a critical hit.</information>
+    <location>Exchange at Fight Area with 64 (Battle Points)</location>
+    <suggestion>Great against flying Pokemon.</suggestion>
+  </TM>
+  <TM id='72'>
+    <name>Avalanche</name>
+    <kind>Physical</kind>
+    <type>Ice</type>
+    <PP>10</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>Power is 120 if foe attacks first.</information>
+    <location>Kissaki Gym</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='73'>
+    <name>Thunder Wave</name>
+    <kind>Other</kind>
+    <type>Electric</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>Paralyzes the foe.</information>
+    <location>Exchange at Fight Area with 32 (Battle Points)</location>
+    <suggestion>Personally, I really like this move. Great as an annoyer.</suggestion>
+  </TM>
+  <TM id='74'>
+    <name>Gyro Ball</name>
+    <kind>Physical</kind>
+    <type>Steel</type>
+    <PP>5</PP>
+    <accuracy>100</accuracy>
+    <information>Power depends on the foe's speed.</information>
+    <location>Exchange at Game Arcade with 15000 (Tokens)</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='75'>
+    <name>Swords Dance</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>30</PP>
+    <information>Sharply raises Pokemon's attack.</information>
+    <location>Exchange at Game Arcade with 4000 (Tokens)</location>
+    <suggestion>Can be deadly if used strategically well in combination with attack moves.</suggestion>
+  </TM>
+  <TM id='76'>
+    <name>Stealth Rock</name>
+    <kind>Other</kind>
+    <type>Rock</type>
+    <PP>20</PP>
+    <information>Causes damage when opponent switches Pokemon.</information>
+    <location>Kurogane Gym</location>
+    <suggestion>This can be a good annoyer.</suggestion>
+  </TM>
+  <TM id='77'>
+    <name>Psych Up</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Copies the foe's effects and gives to the user.</information>
+    <location>Route 211</location>
+    <suggestion>Great to use if the foe has just used a lot of stat-increasing moves.</suggestion>
+  </TM>
+  <TM id='78'>
+    <name>Captivate</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>If the foe is the opposite gender of the user, then the foe's special attack will be lowered.</information>
+    <location>Victory Road</location>
+    <suggestion>Good if your opponent's Pokemon have the same gender and they are opposite from the Pokemon on your team using charm.</suggestion>
+  </TM>
+  <TM id='79'>
+    <name>Dark Pulse</name>
+    <kind>Special</kind>
+    <type>Dark</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>May cause flinching.</information>
+    <location>Victory Road</location>
+    <suggestion>Great dark-type attack.</suggestion>
+  </TM>
+  <TM id='80'>
+    <name>Rock Slide</name>
+    <kind>Physical</kind>
+    <type>Rock</type>
+    <PP>10</PP>
+    <power>75</power>
+    <accuracy>90</accuracy>
+    <information>May cause flinching.</information>
+    <location>Tengan Mountain</location>
+    <suggestion>Decent attack.</suggestion>
+  </TM>
+  <TM id='81'>
+    <name>X-Scissor</name>
+    <kind>Physical</kind>
+    <type>Bug</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Nothing special as far as added effects go.</information>
+    <location>Exchange at Fight Area with 64 (Battle Points)</location>
+    <suggestion>Great bug-type attack.</suggestion>
+  </TM>
+  <TM id='82'>
+    <name>Sleep Talk</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Uses a random move in its own moveset while asleep.</information>
+    <location>Hakutai Forest</location>
+    <suggestion>Great way to counter the effects of sleep.</suggestion>
+  </TM>
+  <TM id='83'>
+    <name>Nature Gift</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <accuracy>100</accuracy>
+    <information>The power of the move depends on the held berry.</information>
+    <location>Buy at Tobari Department Store with 2000 (Money)</location>
+    <suggestion>Use if you have a good berry.</suggestion>
+  </TM>
+  <TM id='84'>
+    <name>Poison Jab</name>
+    <kind>Physical</kind>
+    <type>Poison</type>
+    <PP>20</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Foe may become poisoned.</information>
+    <location>Route 212</location>
+    <suggestion>Use on Poison Pokemon with a high attack.</suggestion>
+  </TM>
+  <TM id='85'>
+    <name>Dream Eater</name>
+    <kind>Special</kind>
+    <type>Psychic</type>
+    <PP>15</PP>
+    <power>100</power>
+    <accuracy>100</accuracy>
+    <information>Half of the inflicted damaged is restored to user's HP. This attack only works while the foe is asleep.</information>
+    <location>Aspiration Lake Side</location>
+    <suggestion>Great if you can land a Hypnosis + Dream Eater combination.</suggestion>
+  </TM>
+  <TM id='86'>
+    <name>Grass Knot</name>
+    <kind>Special</kind>
+    <type>Grass</type>
+    <PP>20</PP>
+    <accuracy>100</accuracy>
+    <information>Power depends on the foe's weight.</information>
+    <location>Hakutai Gym</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='87'>
+    <name>Swagger</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <accuracy>90</accuracy>
+    <information>Raises the foe's attack but also causes confusion</information>
+    <location>Pokemon Mansion</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='88'>
+    <name>Pluck</name>
+    <kind>Physical</kind>
+    <type>Flying</type>
+    <PP>20</PP>
+    <power>60</power>
+    <accuracy>100</accuracy>
+    <information>Power is 120 if the foe is holding a berry.</information>
+    <location>Sonou Town</location>
+    <suggestion>Great if the foe is holding a berry.</suggestion>
+  </TM>
+  <TM id='89'>
+    <name>U-Turn</name>
+    <kind>Physical</kind>
+    <type>Bug</type>
+    <PP>20</PP>
+    <power>70</power>
+    <accuracy>100</accuracy>
+    <information>User switches out automatically after attack.</information>
+    <location>Exchange at Game Arcade with 6000 (Tokens)</location>
+    <suggestion>Can be deadly if used strategically well.</suggestion>
+  </TM>
+  <TM id='90'>
+    <name>Substitute</name>
+    <kind>Other</kind>
+    <type>Normal</type>
+    <PP>10</PP>
+    <information>Creates a substitute using 1/4 of user's Max HP.Location: Forest Manor2nd </information>
+    <location>Forest Manor</location>
+    <suggestion>Use this in combination with Focus Punch.</suggestion>
+  </TM>
+  <TM id='91'>
+    <name>Flash Cannon</name>
+    <kind>Special</kind>
+    <type>Steel</type>
+    <PP>10</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>May lower the foe's special attack.</information>
+    <location>Mio Gym</location>
+    <suggestion>Use on a Steel Pokemon who has a high special attack.</suggestion>
+  </TM>
+  <TM id='92'>
+    <name>Trick Room</name>
+    <kind>Other</kind>
+    <type>Psychic</type>
+    <PP>5</PP>
+    <information>Slower Pokemon attack first for 5 turns.</information>
+    <location>Route 213</location>
+    <suggestion>Can be deadly if used strategically well in combination with slow, high-attack Pokemon.</suggestion>
+  </TM>
+  <HM id='01'>
+    <name>Cut</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>30</PP>
+    <power>50</power>
+    <accuracy>95</accuracy>
+    <information>Outside of battle, this cuts plants in the way. Inside of battle, nothing special as far as added effects go.</information>
+    <location>Shirona in Hakutai Forest</location>
+    <suggestion>If you have to use it, put in on a Grass Pokemon.</suggestion>
+  </HM>
+  <HM id='02'>
+    <name>Fly</name>
+    <kind>Physical</kind>
+    <type>Flying</type>
+    <PP>15</PP>
+    <power>90</power>
+    <accuracy>95</accuracy>
+    <information>Outside of battle, this will be your main way of transporting from one city to another quickly. Inside of battle, flies in the sky the first turn and attacks the second turn.</information>
+    <location>Team Galaxy Warehouse</location>
+    <suggestion>A must have if you travel a lot.</suggestion>
+  </HM>
+  <HM id='03'>
+    <name>Surf</name>
+    <kind>Special</kind>
+    <type>Water</type>
+    <PP>15</PP>
+    <power>95</power>
+    <accuracy>100</accuracy>
+    <information>Outside of battle, this will allow you to travel across water. Inside of battle, nothing special as far as added effects go.</information>
+    <location>Kannagi Town Shrine</location>
+    <suggestion>If you have a water Pokemon, definitely give it this.</suggestion>
+  </HM>
+  <HM id='04'>
+    <name>Strength</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Outside of battle, this will allow you to move boulders. Inside of battle, nothing special as far as added effects go.</information>
+    <location>Top Floor of the Lost Tower</location>
+    <suggestion>If you have to use it, put it on a Rock Pokemon.</suggestion>
+  </HM>
+  <HM id='05'>
+    <name>De Fog</name>
+    <kind>Other</kind>
+    <type>Flying</type>
+    <PP>15</PP>
+    <information>Outside of battle, this will clear the fog in foggy areas. Inside of battle, this will lower the foe's evasiveness.</information>
+    <location>Person in Safari Zone</location>
+    <suggestion>I only used it once during game play. I would not recommend it for a serious moveset.</suggestion>
+  </HM>
+  <HM id='06'>
+    <name>Rock Smash</name>
+    <kind>Physical</kind>
+    <type>Fighting</type>
+    <PP>15</PP>
+    <power>40</power>
+    <accuracy>100</accuracy>
+    <information>Outside of battle, this will allow you to break rocks. Inside of battle, this may lower the foe's defense.</information>
+    <location>Hiker at Tengan Mountain Entrance</location>
+    <suggestion></suggestion>
+  </HM>
+  <HM id='07'>
+    <name>Waterfall</name>
+    <kind>Physical</kind>
+    <type>Water</type>
+    <PP>15</PP>
+    <power>80</power>
+    <accuracy>100</accuracy>
+    <information>Outside of battle, this will allow you to climb waterfalls. Inside of battle, nothing special as far as added effects go.</information>
+    <location>Jasmine in Nasagi City</location>
+    <suggestion>Use on a Water Pokemon with a high attack.</suggestion>
+  </HM>
+  <HM id='08'>
+    <name>Rock Climb</name>
+    <kind>Physical</kind>
+    <type>Normal</type>
+    <PP>20</PP>
+    <power>90</power>
+    <accuracy>85</accuracy>
+    <information>Outside of battle, this will allow you to climb certain spots on mountains. Inside of battle, this may inflict confusion upon the foe.</information>
+    <location>Route 217 (Behind a house)</location>
+    <suggestion>Poor accuracy for power, in my opinion. Use if you have high luck confusing the foe.</suggestion>
+  </HM>
+</list>

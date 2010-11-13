@@ -1,25 +1,24 @@
 #include "pokemon.h"
 
 Pokemon::Pokemon(int id) : name_(""),
-			   description_("");
-			   weight_(0.0),
-			   height_(0.0),
-			   max_xp_(0),
-			   ratio_(0.0),
-			   hp_(0),
-			   atk_(0),
-			   def_(0),
-			   spd_(0),
-			   sat_(0),
-			   sde_(0)
+				 weight_(0.0),
+				 max_xp_(0),
+				 act_xp_(0.0),
+				 level(1),
+				 ratio_(0.0),
+				 hp_(0),
+				 atk_(0),
+				 def_(0),
+				 spd_(0),
+				 sat_(0),
+				 sde_(0),
+				 alive(true)
 {
   if (id > 0)
     id_ = id;
   for (int i = 0; i < 3; ++i)
     evo[i] = 0;
 }
-
-
 
 Pokemon::~Pokemon()
 {
@@ -36,13 +35,6 @@ void	Pokemon::setWeight(float w)
 {
   if (w > 0)
     weight = w;
-}
-
-
-void	Pokemon::setHeight(float h)
-{
-  if (h > 0)
-    height = h;
 }
 
 void	Pokemon::setMaxXp(int m)
@@ -109,19 +101,9 @@ QString	Pokemon::getName() const
   return name_;
 }
 
-QString Pokemon::getDescription() const
-{
-  return description_;
-}
-
 float	Pokemon::getWeight() const
 {
   return weight_;
-}
-
-float	Pokemon::getHeight() const
-{
-  return height_;
 }
 
 int	Pokemon::getMaxXp() const
