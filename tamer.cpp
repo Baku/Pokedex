@@ -15,7 +15,7 @@ tamer::~tamer()
 {
 }
 
-tamer	&tamer::tamer(const tamer &to_copy)
+tamer::tamer(const tamer &to_copy)
 {
   this->_name = to_copy._name;
   this->_id = to_copy._id;

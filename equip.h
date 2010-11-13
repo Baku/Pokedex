@@ -6,9 +6,9 @@ class	equip
  public:
   equip(int);
   equip(int, std::string);
-  equip	*equip(const equip &);
+  equip(const equip &);
   ~equip();
-  equip	*operator=(const equip &);
+  equip	&operator=(const equip &);
 
   void		set_name(std::string);
 

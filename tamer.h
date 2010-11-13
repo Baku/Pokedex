@@ -7,8 +7,8 @@ class	tamer
 {
  public:
   tamer(std::string name, int type);
+  tamer(const tamer &);
   ~tamer();
-  tamer	&tamer(const tamer &);
   tamer	&operator=(const tamer &);
 
   void		set_genre(int);

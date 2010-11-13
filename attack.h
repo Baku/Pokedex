@@ -5,9 +5,9 @@ class	attack
 {
  public:
   attack();
+  attack(const attack &);
   ~attack();
-  attack	*attack(const attack &);
-  attack	*operator=(const attack &);
+  attack	&operator=(const attack &);
 
   void		set_name(std::string);
   void		set_type(std::string);

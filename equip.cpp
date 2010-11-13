@@ -17,15 +17,14 @@ equip::~equip()
 {
 }
 
-equip	*equip::equip(const equip &to_copy)
+equip::equip(const equip &to_copy)
 {
   this->_name = to_copy.name;
   this->_tamerId = to_copy._tamerId;
   this->_id = to_copy._id;
-  return this;
 }
 
-equip	*operator=(const equip &to_copy)
+equip	&operator=(const equip &to_copy)
 {
   if (this != &to_copy)
     {
@@ -33,7 +32,7 @@ equip	*operator=(const equip &to_copy)
       this->_tamerId = to_copy._tamerId;
       this->_id = to_copy._id;
     }
-  return this;
+  return *this;
 }
 
 void	equip::set_name(std::string name)

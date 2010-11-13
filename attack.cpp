@@ -8,17 +8,16 @@ attack::~attack()
 {
 }
 
-attack	*attack::attack(const attack &to_copy)
+attack::attack(const attack &to_copy)
 {
   this->_level = to_copy._level;
   this->_type = to_copy._type;
   this->_name = to_copy._name;
   this->is_special = to_copy._is_special;
   this->_id = to_copy._id;
-  return this;
 }
 
-attack	*operator=(const attack &to_copy)
+attack	&operator=(const attack &to_copy)
 {
   if (*this != to_copy)
     {
@@ -28,7 +27,7 @@ attack	*operator=(const attack &to_copy)
       this->is_special = to_copy._is_special;
       this->_id = to_copy._id;
     }
-  return this;
+  return *this;
 }
 
 void	attack::set_name(std::string name)
