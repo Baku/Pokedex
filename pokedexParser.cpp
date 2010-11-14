@@ -7,6 +7,7 @@ PokedexParser::PokedexParser(QString filename) : filename_(filename)
   inEvo_ = false;
   inTmHm_ = false;
   inLevel_ = false;
+  inEggs_ = false;
 }
 
 PokedexParser::~PokedexParser()
@@ -39,6 +40,18 @@ Pokemon	*PokedexParser::getPokemon(int id)
   return (NULL);
 }
 
+Pokemon	*PokedexParser::getPokemon(QString name)
+{
+  QList<Pokemon>::iterator begin = pokedex_.begin();
+  QList<Pokemon>::iterator end = pokedex_.end();
+  
+  for (QList<Pokemon>::iterator it = begin; it != end; ++it)
+    if ((*it).getName() == name)
+      return (new Pokemon((*it)));
+  std::cout << "Error, You're pokemon doesn't exist" << std::endl;
+  return (NULL);
+}
+
 bool PokedexParser::startElement(const QString		&//namespaceURI
 				 ,
 				 const QString		&//localName
@@ -48,6 +61,13 @@ bool PokedexParser::startElement(const QString		&//namespaceURI
 {
   if (qName == "pokedex")
     this->inPokedex_ = true;
+  else if (qName == "pokemon")
+    {
+      if ((attrs.count() >= 1) && (attrs.qName(0) == "id"))
+	tmpPok_ = new Pokemon(attrs.value(0).toInt());
+      else
+	tmpPok_ = NULL;
+    }
   else if (qName == "evolution")
     {
       if ((attrs.count() >= 1) && (attrs.qName(0) == "id"))
@@ -68,14 +88,9 @@ bool PokedexParser::startElement(const QString		&//namespaceURI
 	      tmpTm_hm_ = new Tm_hm();
 	      inTmHm_ = true;
 	    }
+	  else if (attrs.value(0) == "egg")
+	    inEggs_ = true;
 	}
-    }
-  else if (qName == "pokemon")
-    {
-      if ((attrs.count() >= 1) && (attrs.qName(0) == "id"))
-	tmpPok_ = new Pokemon(attrs.value(0).toInt());
-      else
-	tmpPok_ = NULL;
     }
   return true;
 }
@@ -112,6 +127,8 @@ bool PokedexParser::endElement(const QString  &//namespaceURI
 	  tmpLevel_ = NULL;
 	  inLevel_ = false;
 	}
+      else if (inEggs_)
+	inEggs_ = false;
     }
   else if (qName == "name")
     {
@@ -121,6 +138,8 @@ bool PokedexParser::endElement(const QString  &//namespaceURI
 	tmpTm_hm_->setName(tmpString_);
       else if (inLevel_)
 	tmpLevel_->setName(tmpString_);
+      else if (inEggs_)
+	tmpPok_->addEgg(tmpString_);
       else
 	tmpPok_->setName(tmpString_);
     }

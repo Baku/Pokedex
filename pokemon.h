@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 04:46:20 2010 nicolas pascual
-** Last update Sun Nov 14 05:00:52 2010 nicolas pascual
+** Last update Sun Nov 14 07:28:42 2010 nicolas pascual
 */
 
 #ifndef __POKEMON_H_
@@ -23,7 +23,7 @@ class Pokemon
  public:
   Pokemon(int);
   Pokemon(Pokemon*);
-  virtual ~Pokemon();
+  ~Pokemon();
 
   void		setName(QString);
   void		addType(QString);
@@ -43,6 +43,7 @@ class Pokemon
   void		addLevel(Level*);
   void		setSpecies(QString);
   void		addEggGroup(QString);
+  void		addEgg(QString);
 
   int		getId() const;
   QString	getName() const;
@@ -63,7 +64,10 @@ class Pokemon
   QList<Level*>	getLevels() const;
   QString	getSpecies() const;
   QList<QString> getEggGroup() const;
+  QList<QString> getEggs() const;
 
+  
+  QList<QString>	getAttributes();
   void		print();
 
  private:
@@ -86,6 +90,7 @@ class Pokemon
   QList<Level*>		level_;
   QString		species_;
   QList<QString>	eggGroup_;
+  QList<QString>	eggs_;
 };
 
 #endif /* __POKEMON_H_ */

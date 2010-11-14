@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 04:43:27 2010 nicolas pascual
-** Last update Sun Nov 14 04:58:17 2010 nicolas pascual
+** Last update Sun Nov 14 06:53:49 2010 nicolas pascual
 */
 
 #ifndef __POKEDEXPARSER_H_
@@ -22,7 +22,8 @@ class PokedexParser : public QXmlDefaultHandler
   PokedexParser(QString);
   virtual ~PokedexParser();
   void	parse();
-  Pokemon	*getPokemon(int id);
+  Pokemon	*getPokemon(int);
+  Pokemon	*getPokemon(QString);
 
   //parser methods
   bool startElement(const QString &namespaceURI, const QString &localName,
@@ -38,6 +39,7 @@ private:
   bool			inEvo_;
   bool			inTmHm_;
   bool			inLevel_;
+  bool			inEggs_;
   Pokemon		*tmpPok_;
   QString		tmpString_;
   Evolution		*tmpEvo_;

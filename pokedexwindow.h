@@ -54,7 +54,7 @@ private:
     QLabel           *pokeImage;
     QPixmap          *pixmap_img;
     QPixmap          *pokePix;
-    QList<Pokemon>   pokeList;
+    PokedexParser    *parser;
 };
 
 #endif // POKEDEXWINDOW_H

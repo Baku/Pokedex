@@ -5,7 +5,7 @@
 // Login   <pascua_n@epitech.net>
 // 
 // Started on  Sun Nov 14 04:47:07 2010 nicolas pascual
-// Last update Sun Nov 14 05:41:15 2010 nicolas pascual
+// Last update Sun Nov 14 07:38:03 2010 nicolas pascual
 //
 
 #include "pokemon.h"
@@ -49,6 +49,7 @@ Pokemon::Pokemon(Pokemon *p)
   this->level_ = p->getLevels();
   this->species_ = p->getSpecies();
   this->eggGroup_ = p->getEggGroup();
+  this->eggs_ = p->getEggs();
 }
 
 Pokemon::~Pokemon()
@@ -157,6 +158,11 @@ void		Pokemon::addEggGroup(QString eg)
   eggGroup_.push_back(eg);
 }
 
+void		Pokemon::addEgg(QString egg)
+{
+  eggs_.push_back(egg);
+}
+
 // getters
 
 int	Pokemon::getId() const
@@ -252,6 +258,70 @@ QString	Pokemon::getSpecies() const
 QList<QString> Pokemon::getEggGroup() const
 {
   return eggGroup_;
+}
+
+QList<QString> Pokemon::getEggs() const
+{
+  return eggs_;
+}
+
+QList<QString>	Pokemon::getAttributes()
+{
+  QList<QString> res;
+  QString	tmpS;
+
+  //  res << "Pokemon #" + id_;
+  res << "name:" + name_ ;
+  res << "description:" + description_ ;
+  res << "weight:" + tmpS.setNum(weight_) ;
+  res << "height:" + tmpS.setNum(height_) ;
+  res << "max Xp:" + tmpS.setNum(max_xp_) ;
+  
+  QString tmp = "types:" ;
+  for (QList<QString>::iterator it = types_.begin();
+       it < types_.end();
+       it++)
+    tmp += (*it) + ", ";
+  res << tmp;
+
+  tmp = "evolutions:";
+  for (QList<Evolution*>::iterator it = evo_.begin();
+       it < evo_.end();
+       it++)
+    tmp += (*it)->getName() + ", ";
+  res << tmp;
+
+  tmp = "tm_hms:" ;
+  for (QList<Tm_hm*>::iterator it = tm_hm_.begin();
+       it < tm_hm_.end();
+       it++)
+    tmp += (*it)->getName() + ", ";
+  res << tmp;
+
+  tmp = "level-up:" ;
+  for (QList<Level*>::iterator it = level_.begin();
+       it < level_.end();
+       it++)
+    tmp += (*it)->getName() + ", ";
+  res << tmp;
+
+
+
+  tmp = "egg-group:" ;
+  for (QList<QString>::iterator it = eggGroup_.begin();
+       it < eggGroup_.end();
+       it++)
+    tmp +=  ", " + (*it) ;
+  res << tmp;
+  res << "ratio:" + tmpS.setNum(ratio_) ;
+  res << "hp:" + tmpS.setNum(hp_) ;
+  res << "atk:" + tmpS.setNum(atk_) ;
+  res << "def:" + tmpS.setNum(def_) ;
+  res << "spd:" + tmpS.setNum(spd_) ;
+  res << "sat:" + tmpS.setNum(sat_) ;
+  res << "sde:" + tmpS.setNum(sde_) ;
+  res << "species:" + species_ ;
+  return res;
 }
 
 void	Pokemon::print()

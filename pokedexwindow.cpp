@@ -6,17 +6,18 @@ pokedexWindow::pokedexWindow()
     this->w->setMinimumSize(710, 484);
     this->w->setMaximumSize(710, 484);
 
-    PokedexParser parser("pokedata.xml");
+    parser = new PokedexParser("pokedata.xml");
 
-    parser.parse();
+    parser->parse();
 
-    this->pokeList = parser.pokedex_;
-    for (QList<Pokemon>::iterator it = this->pokeList.begin();
-        it < this->pokeList.end();
+    QList<Pokemon> pokeList = parser->pokedex_;
+    for (QList<Pokemon>::iterator it = pokeList.begin();
+        it < pokeList.end();
         it++)
         this->listePokemon << (*it).getName();
- /*   this>listePokemon << "Tiplouf" << "Arceus" << "Pikachu";
-    this->currentPokemonList << "ATK = 42" << "DEF = 87" << "TYPE = EAU" << "DESCRIPTION = zeefuzenfozenfiozenfozenfiozenfozenfozenfnzeoifnzeoinfozeinfozeinfiozenfoizenfiozenfiozenfoizenfiozenfiozenfozenfiozenfiozneiofnzeiofnzeionfzeionfiozenfiozenfzioenfzioenfionzeifnzeionfzeoinfzoifniozefnzioenfzioenfzioenfzoeifnzioenfzeoinfzeoin";*/
+
+    // this->currentPokemonList << "ATK = 42" << "DEF = 87" << "TYPE = EAU" << "DESCRIPTION = zeefuzenfozenfiozenfozenfiozenfozenfozenfnzeoifnzeoinfozeinfozeinfiozenfoizenfiozenfiozenfoizenfiozenfiozenfozenfiozenfiozneiofnzeiofnzeionfzeionfiozenfiozenfzioenfzioenfionzeifnzeionfzeoinfzoifniozefnzioenfzioenfzioenfzoeifnzioenfzeoinfzeoin";
+
     this->allModele = new QStringListModel(listePokemon);
     this->teamModele = new QStringListModel();
     this->currentPokemonModele = new QStringListModel(this->currentPokemonList);
@@ -126,6 +127,13 @@ void    pokedexWindow::changeImage()
     QVariant elementSelectionne = allModele->data(indexElementSelectionne, Qt::DisplayRole);
     delete this->pixmap_img;
     //pixmap_img = new QPixmap("C:\\Pokemon/" + elementSelectionne.toString() + ".png");
+    Pokemon *p = parser->getPokemon(elementSelectionne.toString());
+    
+    QList<QString> list = p->getAttributes();
+
+    //this->currentPokemon << elementSelectionne.toString();
+    this->currentPokemonModele->setStringList(list);
+    this->currentPokemonView->setModel(this->currentPokemonModele);
     pixmap_img = new QPixmap(QDir::currentPath() + "/Pokemon/" + elementSelectionne.toString() + ".png");
     label_img->setPixmap(*pixmap_img);
 }
