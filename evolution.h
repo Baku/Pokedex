@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 01:05:17 2010 nicolas pascual
-** Last update Sun Nov 14 04:40:55 2010 nicolas pascual
+** Last update Sun Nov 14 08:45:55 2010 nicolas pascual
 */
 
 #ifndef __EVOLUTION_H_
@@ -28,6 +28,7 @@ class Evolution
   void	setLevel(int);
 
   void	print();
+  QString to_xml();
  private:
   int	id_;
   QString	name_;

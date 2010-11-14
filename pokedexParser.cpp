@@ -17,15 +17,11 @@ PokedexParser::~PokedexParser()
 
 void	PokedexParser::parse()
 {
-  std::cout << "Debut parsing:" << filename_.toStdString() << std::endl;
-
   QFile *file = new QFile(filename_);
   QXmlInputSource source(file);
   QXmlSimpleReader reader;
   reader.setContentHandler(this);
   reader.parse(source);
-
-  std::cout << "Fin du parsing" << std::endl;
 }
  
 Pokemon	*PokedexParser::getPokemon(int id)
@@ -36,7 +32,7 @@ Pokemon	*PokedexParser::getPokemon(int id)
   for (QList<Pokemon>::iterator it = begin; it != end; ++it)
     if ((*it).getId() == id)
       return (new Pokemon((*it)));
-  std::cout << "Error, You're pokemon doesn't exist" << std::endl;
+  std::cout << "Error, Your pokemon doesn't exist" << std::endl;
   return (NULL);
 }
 
@@ -48,7 +44,7 @@ Pokemon	*PokedexParser::getPokemon(QString name)
   for (QList<Pokemon>::iterator it = begin; it != end; ++it)
     if ((*it).getName() == name)
       return (new Pokemon((*it)));
-  std::cout << "Error, You're pokemon doesn't exist" << std::endl;
+  std::cout << "Error, Your pokemon doesn't exist" << std::endl;
   return (NULL);
 }
 
@@ -113,6 +109,8 @@ bool PokedexParser::endElement(const QString  &//namespaceURI
       tmpPok_->addEvolution(tmpEvo_);
       inEvo_ = false;
     }  
+  else if (qName == "ability")
+    tmpPok_->setAbility(tmpString_);
   else if (qName == "move")
     {
       if (inTmHm_)
@@ -164,6 +162,8 @@ bool PokedexParser::endElement(const QString  &//namespaceURI
     tmpPok_->setHeight(tmpString_.toFloat());
   else if (qName == "description")
     tmpPok_->setDescription(tmpString_);
+  else if (qName == "machine")
+    tmpTm_hm_->setMachine(tmpString_);
   else if (qName == "weight")
     tmpPok_->setWeight(tmpString_.toFloat());
   else if (qName == "male")

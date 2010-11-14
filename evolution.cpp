@@ -5,7 +5,7 @@
 // Login   <pascua_n@epitech.net>
 // 
 // Started on  Sun Nov 14 04:41:21 2010 nicolas pascual
-// Last update Sun Nov 14 04:41:23 2010 nicolas pascual
+// Last update Sun Nov 14 08:47:39 2010 nicolas pascual
 //
 
 #include "evolution.h"
@@ -52,4 +52,16 @@ void	Evolution::print()
   std::cout << "id:" << id_ << std::endl;
   std::cout << "name:" << name_.toStdString() << std::endl;
   std::cout << "level:" << level_ << std::endl;
+}
+
+QString	Evolution::to_xml()
+{
+  QString res = "";
+  QString tmp;
+
+  res += "<evolution id='" +  tmp.setNum(id_) + "'>\n";
+  res += "<name>" + name_ + "</name>\n";
+  res += "<lvl>" + tmp.setNum(level_) + "</lvl>\n";
+  res += "</evolution>\n";
+  return res;
 }

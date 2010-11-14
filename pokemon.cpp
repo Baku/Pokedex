@@ -5,7 +5,7 @@
 // Login   <pascua_n@epitech.net>
 // 
 // Started on  Sun Nov 14 04:47:07 2010 nicolas pascual
-// Last update Sun Nov 14 07:38:03 2010 nicolas pascual
+// Last update Sun Nov 14 09:07:35 2010 nicolas pascual
 //
 
 #include "pokemon.h"
@@ -50,6 +50,7 @@ Pokemon::Pokemon(Pokemon *p)
   this->species_ = p->getSpecies();
   this->eggGroup_ = p->getEggGroup();
   this->eggs_ = p->getEggs();
+  this->ability_ = p->getAbility();
 }
 
 Pokemon::~Pokemon()
@@ -71,6 +72,11 @@ void	Pokemon::addType(QString type)
 void	Pokemon::setDescription(QString desc)
 {
   description_ = desc;
+}
+
+void	Pokemon::setAbility(QString ab)
+{
+  ability_ = ab;
 }
 
 void	Pokemon::setWeight(float w)
@@ -180,6 +186,11 @@ QString Pokemon::getDescription() const
   return description_;
 }
 
+QString Pokemon::getAbility() const
+{
+  return ability_;
+}
+
 QList<QString>	Pokemon::getTypes() const
 {
   return types_;
@@ -273,6 +284,7 @@ QList<QString>	Pokemon::getAttributes()
   //  res << "Pokemon #" + id_;
   res << "name:" + name_ ;
   res << "description:" + description_ ;
+  res << "ability:" + ability_ ;
   res << "weight:" + tmpS.setNum(weight_) ;
   res << "height:" + tmpS.setNum(height_) ;
   res << "max Xp:" + tmpS.setNum(max_xp_) ;
@@ -295,7 +307,7 @@ QList<QString>	Pokemon::getAttributes()
   for (QList<Tm_hm*>::iterator it = tm_hm_.begin();
        it < tm_hm_.end();
        it++)
-    tmp += (*it)->getName() + ", ";
+    tmp += (*it)->getName() + "(" + tmpS.setNum((*it)->getLevel())  + "), ";
   res << tmp;
 
   tmp = "level-up:" ;
@@ -304,8 +316,6 @@ QList<QString>	Pokemon::getAttributes()
        it++)
     tmp += (*it)->getName() + ", ";
   res << tmp;
-
-
 
   tmp = "egg-group:" ;
   for (QList<QString>::iterator it = eggGroup_.begin();
@@ -362,4 +372,67 @@ void	Pokemon::print()
   std::cout << "-sde:" << sde_ << std::endl;
   std::cout << "-species:" << species_.toStdString() << std::endl;
   std::cout << std::endl;
+}
+
+
+QString		Pokemon::to_xml()
+{
+  QString res = "";
+  QString tmp;
+
+  res += "<pokemon id='" + tmp.setNum(id_) + "'>\n";
+  res += "<name>" + name_ + "</name>\n";
+  for (QList<QString>::iterator it = types_.begin();
+       it < types_.end(); it++)
+    res += "<type>" + (*it) + "</type>\n";
+
+  res += "<exp>" + tmp.setNum(max_xp_) + "</exp>\n";
+  res += "<stats>\n";
+  res += "<HP>" + tmp.setNum(hp_) + "</hp>\n";
+  res += "<ATK>" + tmp.setNum(atk_) + "</ATK>\n";
+  res += "<DEF>" + tmp.setNum(def_) + "</DEF>\n";
+  res += "<SPD>" + tmp.setNum(spd_) + "</SPD>\n";
+  res += "<SAT>" + tmp.setNum(sat_) + "</SAT>\n";
+  res += "<SDF>" + tmp.setNum(sde_) + "</SDF>\n";
+  res += "<stats>\n";
+
+  res += "<evolutions>\n";
+  for (QList<Evolution*>::iterator it = evo_.begin();
+       it < evo_.end();
+       it++)
+    res += (*it)->to_xml();
+  res += "</evolutions>\n";
+
+  res += "<ratio>\n";
+  res += "<male>" + tmp.setNum(ratio_) + "</male>\n";
+  res += "<female>" + tmp.setNum(1 - ratio_) + "</female>\n";
+  res += "</ratio>\n";
+
+  for (QList<QString>::iterator it = eggGroup_.begin();
+       it < eggGroup_.end();
+       it++)
+    res += "<egg-group>" + (*it) + "</egg-group>\n";
+
+  res += "<species>" + species_ + "</species>\n";
+  res += "<weight>" + tmp.setNum(weight_) + "</weight>\n";
+  res += "<height>" + tmp.setNum(height_) + "</height>\n";
+  res += "<description>" + description_ + "</description>\n";
+
+  res += "<moves>\n";
+
+  for (QList<Level*>::iterator it = level_.begin();
+       it < level_.end();
+       it++)
+    res += (*it)->to_xml();
+
+  for (QList<Tm_hm*>::iterator it = tm_hm_.begin();
+       it < tm_hm_.end();
+       it++)
+    res += (*it)->to_xml();
+
+  res += "</moves>\n";
+
+  res += "</pokemon>";
+
+  return res;
 }

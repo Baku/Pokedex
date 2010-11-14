@@ -46,3 +46,16 @@ void	Tm_hm::print() const
   std::cout << "name: " << name_.toStdString() << std::endl;
   std::cout << "level: " << level_ << std::endl;
 }
+
+QString	Tm_hm::to_xml()
+{
+  QString res = "";
+  QString tmp;
+
+  res += "<move type='TM/HM'>\n";
+  res += "<machine>" + machine_ + "</machine>\n";
+  res += "<name>" + name_ + "</name>\n";
+  res += "<lvl>" + tmp.setNum(level_) + "</lvl>\n";
+  res += "</move>\n";
+  return res;
+}

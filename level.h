@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 04:41:45 2010 nicolas pascual
-** Last update Sun Nov 14 04:42:26 2010 nicolas pascual
+** Last update Sun Nov 14 08:42:42 2010 nicolas pascual
 */
 
 #ifndef __LEVEL_H_
@@ -27,6 +27,7 @@ class Level
   QString	getName() const;
   int		getLevel() const;
   void		print() const;
+  QString	to_xml();
 };
 
 #endif /* __LEVEL_H_ */

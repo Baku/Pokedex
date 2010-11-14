@@ -16,8 +16,6 @@ pokedexWindow::pokedexWindow()
         it++)
         this->listePokemon << (*it).getName();
 
-    // this->currentPokemonList << "ATK = 42" << "DEF = 87" << "TYPE = EAU" << "DESCRIPTION = zeefuzenfozenfiozenfozenfiozenfozenfozenfnzeoifnzeoinfozeinfozeinfiozenfoizenfiozenfiozenfoizenfiozenfiozenfozenfiozenfiozneiofnzeiofnzeionfzeionfiozenfiozenfzioenfzioenfionzeifnzeionfzeoinfzoifniozefnzioenfzioenfzioenfzoeifnzioenfzeoinfzeoin";
-
     this->allModele = new QStringListModel(listePokemon);
     this->teamModele = new QStringListModel();
     this->currentPokemonModele = new QStringListModel(this->currentPokemonList);
@@ -129,18 +127,22 @@ void    pokedexWindow::changeImage()
     //pixmap_img = new QPixmap("C:\\Pokemon/" + elementSelectionne.toString() + ".png");
     Pokemon *p = parser->getPokemon(elementSelectionne.toString());
     
+    std::cout << p->to_xml().toStdString() << std::endl;
+
     QList<QString> list = p->getAttributes();
 
     //this->currentPokemon << elementSelectionne.toString();
     this->currentPokemonModele->setStringList(list);
     this->currentPokemonView->setModel(this->currentPokemonModele);
-    pixmap_img = new QPixmap(QDir::currentPath() + "/Pokemon/" + elementSelectionne.toString() + ".png");
+    QString tmp;
+    pixmap_img = new QPixmap(QDir::currentPath() + "/img/" + tmp.setNum(p->getId()) + ".png");
     label_img->setPixmap(*pixmap_img);
 }
 
 void    pokedexWindow::saveTeam()
 {
     QString fichier = QFileDialog::getSaveFileName(this, "Save Team", QString(), "Equipes (*.xml)");
+    
 }
 
 void    pokedexWindow::loadPokemonTrainer()

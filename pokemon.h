@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 04:46:20 2010 nicolas pascual
-** Last update Sun Nov 14 07:28:42 2010 nicolas pascual
+** Last update Sun Nov 14 07:57:38 2010 nicolas pascual
 */
 
 #ifndef __POKEMON_H_
@@ -28,6 +28,7 @@ class Pokemon
   void		setName(QString);
   void		addType(QString);
   void		setDescription(QString);
+  void		setAbility(QString);
   void		setWeight(float);
   void		setHeight(float);
   void		setMaxXp(int);
@@ -48,6 +49,7 @@ class Pokemon
   int		getId() const;
   QString	getName() const;
   QString	getDescription() const;
+  QString	getAbility() const;
   QList<QString>	getTypes() const;
   float		getWeight() const;
   float		getHeight() const;
@@ -69,12 +71,14 @@ class Pokemon
   
   QList<QString>	getAttributes();
   void		print();
+  QString	to_xml();
 
  private:
   int			id_;
   QList<QString>	types_;
   QString		name_;
   QString		description_;
+  QString		ability_;
   float			weight_;
   float			height_;
   int			max_xp_;

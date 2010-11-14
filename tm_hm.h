@@ -5,7 +5,7 @@
 ** Login   <pascua_n@epitech.net>
 ** 
 ** Started on  Sun Nov 14 01:09:51 2010 nicolas pascual
-** Last update Sun Nov 14 03:47:50 2010 nicolas pascual
+** Last update Sun Nov 14 08:54:31 2010 nicolas pascual
 */
 
 #include <QString>
@@ -26,6 +26,8 @@ class Tm_hm
   int	getLevel() const;
 
   void	print() const;
+  QString	to_xml();
+
 
  private:
   QString	machine_;
