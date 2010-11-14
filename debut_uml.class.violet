@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.6.0_18" class="java.beans.XMLDecoder">
+ <object class="com.horstmann.violet.ClassDiagramGraph">
+  <void method="addNode">
+   <object id="ClassNode0" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>- QString               filename_;
+- bool                  inPokedex_;
+- bool                  inEvo_;
+- bool                  inTmHm_;
+- bool                  inLevel_;
+- bool                  inEggs_;
+- Pokemon               *tmpPok_;
+- QString               tmpString_;
+-  Evolution             *tmpEvo_;
+- Tm_hm                 *tmpTm_hm_;
+- Level                 *tmpLevel_;
++ List&lt;Pokemon&gt;        pokedex_;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+ PokedexParser(QString);
++ virtual ~PokedexParser();
++ void  parse();
++ Pokemon       *getPokemon(int);
++ Pokemon       *getPokemon(QString);
++ bool startElement(const QString &amp;namespaceURI, const QString &amp;localName,const QString &amp;qName, const QXmlAttributes &amp;attributes);
++ bool endElement(const QString &amp;namespaceURI, const QString &amp;localName, const QString &amp;qName);
++ bool characters(const QString &amp;str);</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>PokedexParser</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>434.6244584051392</double>
+     <double>869.9575028878802</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object id="ClassNode1" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  int                   id_;
+-  QList&lt;QString&gt;        types_;
+-  QString               name_;
+-  QString               description_;
+-  float                 weight_;
+-  float                 height_;
+-  int                   max_xp_;
+-  QList&lt;Evolution*&gt;     evo_;
+-  float                 ratio_;
+-  int                   hp_;
+-  int                   atk_;
+-  int                   def_;
+-  int                   spd_;
+-  int                   sat_;
+-  int                   sde_;
+-  QList&lt;Tm_hm*&gt;         tm_hm_;
+-  QList&lt;Level*&gt;         level_;
+-  QString               species_;
+-  QList&lt;QString&gt;        eggGroup_;
+-  QList&lt;QString&gt;        eggs_;
+</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+ Pokemon(int);
++ Pokemon(Pokemon*);
++ ~Pokemon();
++  void          setName(QString);
++  void          addType(QString);
++  void          setDescription(QString);
++  void          setWeight(float);
++  void          setHeight(float);
++  void          setMaxXp(int);
++  void          addEvolution(Evolution*);
++  void          setRatio(float);
++  void          setHp(int);
++  void          setAtk(int);
++  void          setDef(int);
++  void          setSpd(int);
++  void          setSat(int);
++  void          setSde(int);
++  void          addTmHm(Tm_hm*);
++  void          addLevel(Level*);
++  void          setSpecies(QString);
++  void          addEggGroup(QString);
++  void          addEgg(QString);
++  int           getId() const;
++  QString       getName() const;
++  QString       getDescription() const;
++  QList&lt;QString&gt;        getTypes() const;
++  float         getWeight() const;
++  float         getHeight() const;
++  int           getMaxXp() const;
++  QList&lt;Evolution*&gt;     getEvolutions() const;
++  float         getRatio() const;
++  int           getHp() const;
++  int           getAtk() const;
++  int           getDef() const;
++  int           getSpd() const;
++  int           getSat() const;
++  int           getSde() const;
++  QList&lt;Tm_hm*&gt; getTmHms() const;
++  QList&lt;Level*&gt; getLevels() const;
++  QString       getSpecies() const;
++  QList&lt;QString&gt; getEggGroup() const;
++  QList&lt;QString&gt; getEggs() const;
++  QList&lt;QString&gt;        getAttributes();
++  void          print();
+</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Pokemon</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>108.0</double>
+     <double>3.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object id="ClassNode2" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  QString       machine_;
+-  QString       name_;
+-  int           level_;
+</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+  Tm_hm();
++  ~Tm_hm();
++  void  setMachine(QString);
++  void  setName(QString);
++  void  setLevel(int);
++  QString       getMachine() const;
++  QString       getName() const;
++  int   getLevel() const;
+
+  void  print() const;</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Tm_hm</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>469.5189027078675</double>
+     <double>76.36753236814711</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  MainWindow       *w;
+-  QStringListModel *allModele;
+-  QStringListModel *teamModele;
+-  QStringListModel *currentPokemonModele;
+-  QStringList      listePokemon;
+-  QStringList      teamPokemon;
+-  QStringList      currentPokemonList;
+-  QPushButton      *bouton;
+-  QPushButton      *loadTrainer;
+-  QPushButton      *createTrainer;
+-  QPushButton      *loadTeam;
+-  QPushButton      *quitButton;
+-  QPushButton      *saveButton;
+-  QPushButton      *deleteButton;
+-  QPushButton      *deleteAllButton;
+-  QListView        *allView;
+-  QListView        *teamView;
+-  QListView        *currentPokemonView;
+-  QLabel           *label_img;
+-  QLabel           *pokeImage;
+-  QPixmap          *pixmap_img;
+-  QPixmap          *pokePix;
+-  PokedexParser    *parser;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+    void run();
++    pokedexWindow();
++    ~pokedexWindow();
+public slots:
++    void        changeImage();
++    void        changeImageFromTeam();
++    void        addTeam();
++    void        saveTeam();
++    void        loadPokemonTrainer();
++   void        loadPokemonTeam();
++    void        deletePokemon();
++   void        deleteAllPokemon();
++    void        createPokemonTrainer();</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>pokedexWindow : public QWidget</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>1117.228714274745</double>
+     <double>46.66904755831216</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object id="ClassNode3" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  Equip();
+-  QString       name_;
+-  int           tamerId_;
+-  int           id_;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+  Equip(int);
++  Equip(int, QString);
++  Equip(const Equip &amp;);
++  ~Equip();
++  Equip &amp;operator=(const Equip &amp;);
++  void          setName(QString);
++  QString       getName() const;
++  int           getTamerId() const;
++  int           getId() const;</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Equip</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>697.207286249936</double>
+     <double>189.50461735799468</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object id="ClassNode4" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  int   id_;
+-  QString       name_;
+-  int           level_;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+  Evolution(int);
++  ~Evolution();
++  int getId() const;
++  QString getName() const;
++  int   getlevel() const;
++  void  setName(QString);
++  void  setLevel(int);
++  void  print();</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Evolution</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>719.8347032479054</double>
+     <double>424.2640687119284</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object id="ClassNode5" class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  QString       name_;
+-  int           level_;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+  Level();
++  ~Level();
++  void          setName(QString);
++  void          setLevel(int);
++  QString       getName() const;
++  int           getLevel() const;
++  void          print() const;</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Level</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>517.6021638285526</double>
+     <double>636.3961030678928</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode">
+    <void property="attributes">
+     <void property="text">
+      <string>-  Ui::MainWindow *ui;</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>+ explicit MainWindow(QWidget *parent = 0);
++ ~MainWindow();</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>MainWindow : public QMainWindow
+</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double">
+    <void method="setLocation">
+     <double>998.434775035405</double>
+     <double>660.4377336282354</double>
+    </void>
+   </object>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="BLACK_DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode2"/>
+   <object idref="ClassNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode3"/>
+   <object idref="ClassNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="BLACK_DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode5"/>
+   <object idref="ClassNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode1"/>
+   <object idref="ClassNode0"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="startArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="BLACK_DIAMOND"/>
+    </void>
+   </object>
+   <object idref="ClassNode4"/>
+   <object idref="ClassNode1"/>
+  </void>
+ </object>
+</java>
