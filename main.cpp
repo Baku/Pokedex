@@ -7,7 +7,7 @@ int	main(int // ac
 	     , char **// av
 	     )
 {
-  PokedexParser parser("1to10.xml");
+  PokedexParser parser("pokedata.xml");
 
   parser.parse();
 
