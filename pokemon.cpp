@@ -5,7 +5,7 @@
 // Login   <pascua_n@epitech.net>
 // 
 // Started on  Sun Nov 14 04:47:07 2010 nicolas pascual
-// Last update Sun Nov 14 05:11:06 2010 nicolas pascual
+// Last update Sun Nov 14 05:41:15 2010 nicolas pascual
 //
 
 #include "pokemon.h"
@@ -47,6 +47,8 @@ Pokemon::Pokemon(Pokemon *p)
   this->sde_ = p->getSde(); 
   this->tm_hm_ = p->getTmHms();
   this->level_ = p->getLevels();
+  this->species_ = p->getSpecies();
+  this->eggGroup_ = p->getEggGroup();
 }
 
 Pokemon::~Pokemon()
@@ -276,10 +278,11 @@ void	Pokemon::print()
        it < level_.end();
        it++)
     (*it)->print();
+  std::cout << "egg-group:" << std::endl;
   for (QList<QString>::iterator it = eggGroup_.begin();
        it < eggGroup_.end();
        it++)
-    std::cout << (*it).toStdString() << std::endl;
+    std::cout << "-name:" << (*it).toStdString() << std::endl;
   std::cout << "-ratio:" << ratio_ << std::endl;
   std::cout << "-hp:" << hp_ << std::endl;
   std::cout << "-atk:" << atk_ << std::endl;
