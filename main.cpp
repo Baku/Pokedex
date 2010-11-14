@@ -1,14 +1,21 @@
+#include "pokedexParser.h"
+#include "pokemon.h"
+
 #include <iostream>
-#include "tamer.h"
 
-int	main()
+int	main(int // ac
+	     , char **// av
+	     )
 {
-  tamer	*red;
-  tamer	*blue;
+  PokedexParser parser("pokedata.xml");
 
-  red = new tamer(1, "toto");
-  blue = red;
-  std::cout << red.get_id() << " " << blue.get_id() << std::endl;
-  std::cout << red.get_genre() << " " << blue.get_genre() << std::endl;
-  std::cout << red.get_name() << " " << blue.get_name() << std::endl;
+  parser.parse();
+
+  for (int i = 1; i <= parser.pokedex_.size(); ++i)
+    {
+      Pokemon *p = parser.getPokemon(i);
+      if (p != NULL)
+	p->print();
+    }
+  return (0);
 }

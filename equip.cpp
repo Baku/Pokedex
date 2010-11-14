@@ -1,56 +1,56 @@
 #include "equip.h"
 
-equip::equip()
+Equip::Equip()
 {
 }
 
-equip::equip(int tamer_id) : _id(id)
+Equip::Equip(int tamer_id) : id_(tamer_id)
 {
 }
 
-equip::equip(int tamer_id, std::string name) : _id(id)
+Equip::Equip(int tamer_id, QString name) : id_(tamer_id)
 {
-  _name = name;
+  name_ = name;
 }
 
-equip::~equip()
+Equip::~Equip()
 {
 }
 
-equip::equip(const equip &to_copy)
+Equip::Equip(const Equip &to_copy)
 {
-  this->_name = to_copy.name;
-  this->_tamerId = to_copy._tamerId;
-  this->_id = to_copy._id;
+  this->name_ = to_copy.name_;
+  this->tamerId_ = to_copy.tamerId_;
+  this->id_ = to_copy.id_;
 }
 
-equip	&operator=(const equip &to_copy)
+Equip	&Equip::operator=(const Equip &to_copy)
 {
   if (this != &to_copy)
     {
-      this->_name = to_copy.name;
-      this->_tamerId = to_copy._tamerId;
-      this->_id = to_copy._id;
+      this->name_ = to_copy.name_;
+      this->tamerId_ = to_copy.tamerId_;
+      this->id_ = to_copy.id_;
     }
   return *this;
 }
 
-void	equip::set_name(std::string name)
+void	Equip::setName(QString name)
 {
-  this->_name = name;
+  this->name_ = name;
 }
 
-Qstring	equip::get_name() const
+QString	Equip::getName() const
 {
-  return this->_name;
+  return this->name_;
 }
 
-int	equip::get_id() const
+int	Equip::getId() const
 {
-  return this->_id;
+  return this->id_;
 }
 
-int	equip::get_tamerId() const
+int	Equip::getTamerId() const
 {
-  return this->_tamerId;
+  return this->tamerId_;
 }

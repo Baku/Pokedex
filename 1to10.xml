@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<pokedex>
+  <pokemon id='1'>
+    <name>BULBASAUR</name>
+    <type>Grass</type>
+    <type>Poison</type>
+    <ability>Overgrow</ability>
+    <exp>1059860</exp>
+    <stats>
+      <HP>45</HP>
+      <ATK>49</ATK>
+      <DEF>49</DEF>
+      <SPD>45</SPD>
+      <SAT>65</SAT>
+      <SDF>65</SDF>
+    </stats>
+    <evolutions>
+      <evolution id='1'>
+        <name>Bulbasaur</name>
+      </evolution>
+      <evolution id='2'>
+        <name>Ivysaur</name>
+        <lvl>16</lvl>
+      </evolution>
+      <evolution id='3'>
+        <name>Venusaur</name>
+        <lvl>32</lvl>
+      </evolution>
+    </evolutions>
+    <ratio>
+      <male>87.5</male>
+      <female>12.5</female>
+    </ratio>
+    <egg-group>Monster</egg-group>
+    <egg-group>Grass</egg-group>
+    <species>Seed Pokemon</species>
+    <height>0.7</height>
+    <weight>6.9</weight>
+    <description>For some time after its birth, it grows by gaining nourishment from the seed on its back.</description>
+    <moves>
+      <move type='level-up'>
+        <name>Tackle</name>
+        <lvl>1</lvl>
+      </move>
+      <move type='level-up'>
+        <name>Growl</name>
+        <lvl>3</lvl>
+      </move>
+      <move type='TM/HM'>
+        <machine>TM</machine>
+        <name>Toxic</name>
+        <lvl>06</lvl>
+      </move>
+      <move type='TM/HM'>
+        <machine>TM</machine>
+        <name>Bullet Seed</name>
+        <lvl>09</lvl>
+      </move>
+      <move type='egg'>
+        <name>Amnesia</name>
+      </move>
+      <move type='egg'>
+        <name>Charm</name>
+      </move>
+    </moves>
+  </pokemon>
+</pokedex>
