@@ -124,15 +124,9 @@ void    pokedexWindow::changeImage()
     QModelIndex indexElementSelectionne = selection->currentIndex();
     QVariant elementSelectionne = allModele->data(indexElementSelectionne, Qt::DisplayRole);
     delete this->pixmap_img;
-    //pixmap_img = new QPixmap("C:\\Pokemon/" + elementSelectionne.toString() + ".png");
     Pokemon *p = parser->getPokemon(elementSelectionne.toString());
     
-    std::cout << p->to_xml().toStdString() << std::endl;
-
-    QList<QString> list = p->getAttributes();
-
-    //this->currentPokemon << elementSelectionne.toString();
-    this->currentPokemonModele->setStringList(list);
+    this->currentPokemonModele->setStringList(p->getAttributes());
     this->currentPokemonView->setModel(this->currentPokemonModele);
     QString tmp;
     pixmap_img = new QPixmap(QDir::currentPath() + "/img/" + tmp.setNum(p->getId()) + ".png");
@@ -141,8 +135,28 @@ void    pokedexWindow::changeImage()
 
 void    pokedexWindow::saveTeam()
 {
-    QString fichier = QFileDialog::getSaveFileName(this, "Save Team", QString(), "Equipes (*.xml)");
-    
+  QString fichier = QFileDialog::getSaveFileName(this, "Save Team", QString(), "Equipes (*.xml)");
+
+  if (!fichier.endsWith(".xml"))
+    fichier += ".xml";
+
+  QString content = "<team>\n";
+  for (QStringList::iterator it = teamPokemon.begin();
+       it < teamPokemon.end();
+       it++)
+    {
+      Pokemon *p = parser->getPokemon((*it));
+      if (p != NULL)
+	content += p->to_xml();
+    }
+  content += "</team>\n";
+  QFile file(fichier);
+  if( !file.open(QIODevice::WriteOnly))
+    return ;
+
+  QTextStream ts(&file);
+  ts << content;
+  file.close();
 }
 
 void    pokedexWindow::loadPokemonTrainer()
